@@ -1,6 +1,7 @@
 package site.javaee.springboot_swagger.config;
 
 import com.google.common.collect.Lists;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
@@ -20,6 +21,7 @@ import java.util.ArrayList;
 public class SwaggerConfig {
 
     //Swagger实例Bean是Docket，所以通过配置Docket实例来配置Swaggger。
+    @Bean
     public Docket docket(){
         return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo());
     }
